@@ -4,7 +4,7 @@
 [core]
        autocrlf = false
        safecrlf = true
-       editor = code --wait
+	editor = \"C:\\Users\\coslo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 [alias]
        co = checkout
        ci = commit
@@ -23,3 +23,9 @@
     guitool = vscode
 [mergetool "vscode"]
     cmd = code --wait $MERGED
+[http]
+	postBuffer = 524288000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+[fetch]
+	prune = true
