@@ -1,31 +1,38 @@
 [user]
-       email = coslove8866@gmail.com
-       name = GSLiTW
+  email = coslove8866@gmail.com
+  name = GSLiTW
 [core]
-       autocrlf = false
-       safecrlf = true
-	editor = \"C:\\Users\\coslo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+  autocrlf = false
+  safecrlf = true
+  editor = cursor --wait
 [alias]
-       co = checkout
-       ci = commit
-       st = status
-       br = branch
-       hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-       type = cat-file -t
-       dump = cat-file -p
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  pushf = push --force-with-lease --force-if-includes
 [diff]
-       tool = vscode
-       guitool = vscode
-[difftool "vscode"]
-       cmd = code --wait --diff $LOCAL $REMOTE
+  tool = cursor
+  guitool = cursor
+[difftool "code"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-    tool = vscode
-    guitool = vscode
-[mergetool "vscode"]
+  tool = cursor
+  guitool = cursor
+[mergetool "code"]
     cmd = code --wait $MERGED
-[http]
-	postBuffer = 524288000
-	lowSpeedLimit = 0
-	lowSpeedTime = 999999
+[fetch]
+  prune = true
+[pull]
+  rebase = true
+[submodule]
+  recurse = true
+[difftool "cursor"]
+  cmd = cursor --wait --diff $LOCAL $REMOTE
+[mergetool "cursor"]
+  cmd = cursor --wait $MERGED
 [fetch]
 	prune = true
